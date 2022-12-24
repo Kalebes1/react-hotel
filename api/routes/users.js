@@ -1,0 +1,29 @@
+import express from "express"
+import { updatedUser, deleteUser, getUser, getUsers } from "../controllers/user.js";
+import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
+
+const router = express.Router();
+
+// router.get("/checkauthentication", verifyToken, (req, res, next)=>{
+//     res.send("Olá usuário, vocês está autenticado")
+// })
+
+// router.get("/checkuser/:id", verifyUser, (req, res, next)=>{
+//     res.send("Olá usuário, vocês está autenticado e pode deletar sua conta.")
+// })
+
+// router.get("/checkadmin/:id", verifyAdmin, (req, res, next)=>{
+//     res.send("Olá admin, vocês está autenticado e pode deletar todas as  contas.")
+// })
+
+//UPDATE
+router.put("/:id", verifyUser, updatedUser)
+//DELETE
+router.delete("/:id", verifyUser, deleteUser)
+//GET
+router.get("/:id", verifyUser, getUser)
+//GET ALL
+router.get("/", verifyAdmin,getUsers)
+
+
+export default router
