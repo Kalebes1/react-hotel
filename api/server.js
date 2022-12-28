@@ -4,7 +4,9 @@ import mongoose from "mongoose"
 import authRoute from "./routes/auth.js"
 import usersRoute from "./routes/users.js"
 import hotelsRoute from "./routes/hotels.js"
+import roomsRoute from "./routes/rooms.js"
 import cookieParser from 'cookie-parser'
+
 const server = express()
 dotenv.config()
 
@@ -29,6 +31,7 @@ server.use(express.json())
 server.use("/api/auth", authRoute)
 server.use("/api/users", usersRoute)
 server.use("/api/hotels", hotelsRoute)
+server.use("/api/rooms", roomsRoute)
 
 server.use((err,req, res, next)=>{
   const errorStatus = err.status || 500
