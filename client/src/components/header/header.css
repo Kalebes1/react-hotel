@@ -1,0 +1,44 @@
+.header{
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainer{
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0 100px 0px;
+}
+
+.headerList{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.headerListItem{
+    display: flex;
+    align-items: center;
+    grid-area: 10px;
+    font-size: 18px;
+}
+
+.headerListItem.active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.headerDesc{
+    margin: 20px 0px;
+}
+
+.headerBtn{
+    background-color: var(--light-blue);
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

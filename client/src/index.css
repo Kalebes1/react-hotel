@@ -1,0 +1,21 @@
+*, *::before, *::after{
+    margin: 0;
+    padding:0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #003580;
+    --light-blue: #0071c2;
+    --transition: all 500ms ease;
+    --transitionTxt: all .2s ease ;
+}
+
+/*GENERAL STYLES*/
+body{
+    overflow-x: hidden;
+}
