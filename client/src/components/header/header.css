@@ -1,4 +1,4 @@
-.header{
+.header {
     background-color: var(--blue);
     color: white;
     display: flex;
@@ -6,37 +6,41 @@
     position: relative;
 }
 
-.headerContainer{
+.headerContainer {
     width: 100%;
     max-width: 1024px;
     margin: 20px 0 100px 0px;
 }
 
-.headerList{
+.headerContainer.listMode{
+    margin: 20px 0px 0px 0px;
+}
+
+.headerList {
     display: flex;
     gap: 40px;
     margin-bottom: 50px;
 }
 
-.headerListItem{
+.headerListItem {
     display: flex;
     align-items: center;
     grid-area: 10px;
     font-size: 18px;
 }
 
-.headerListItem.active{
+.headerListItem.active {
     border: 1px solid white;
     padding: 10px;
     border-radius: 20px;
 }
 
 
-.headerDesc{
+.headerDesc {
     margin: 20px 0px;
 }
 
-.headerBtn{
+.headerBtn {
     background-color: var(--light-blue);
     color: #fff;
     font-weight: 500;
@@ -45,8 +49,8 @@
     cursor: pointer;
 }
 
-.headerSearch{
-    height: 30px;
+.headerSearch {
+    height: 50px;
     background-color: white;
     border: 3px solid #febb02;
     display: flex;
@@ -60,28 +64,68 @@
     max-width: 1024px;
 }
 
-.headerIcon{
+.headerIcon {
     color: lightgray;
 }
 
-.headerSearchItem{
+.headerSearchItem {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.headerSearchInput{
+.headerSearchInput {
     border: none;
     outline: none;
 }
 
-.headerSearchText{
+.headerSearchText {
     color: lightgray;
     cursor: pointer;
 }
 
-.date{
+.date {
     position: absolute;
-    top: 50px;
+    top: 47px;
+}
 
+.options {
+    position: absolute;
+    top: 47px;
+    background-color: white;
+    color: gray;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.9);
+}
+
+
+
+.optionItem{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.optionCounter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.optionCounterButton{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    cursor: pointer;
+    background-color: white;
+}
+
+.optionCounterButton:disabled{
+    cursor: not-allowed;
 }
